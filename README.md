@@ -1,8 +1,8 @@
-# 📚 Documentação do PI - CMPCD Jaú
+#  Documentação do PI - CMPCD Jaú
 
 Esta documentação descreve o andamento do PI (Projeto Integrador) da faculdade, abordando as etapas realizadas e a evolução do projeto focado no desenvolvimento do sistema para o **CMPCD Jaú**.
 
-## 📑 Sumário
+## Sumário
 
 <details>
   <summary><strong>Expandir Sumário</strong></summary>
@@ -23,7 +23,7 @@ Esta documentação descreve o andamento do PI (Projeto Integrador) da faculdade
 
 ---
 
-## 1. 📜 Introdução
+## 1. Introdução
 
 ### Contextualização & Justificativa
 
@@ -55,7 +55,7 @@ O desenvolvimento é estruturado através das seguintes abordagens:
 
 ---
 
-## 2. 📋 Requisitos
+## 2. Requisitos
 
 ### • Requisitos Funcionais
 
@@ -80,7 +80,7 @@ O desenvolvimento é estruturado através das seguintes abordagens:
 
 ---
 
-## 3. 🔍 Estudo de Viabilidade
+## 3. Estudo de Viabilidade
 
 - **Viabilidade Técnica:** Uso de tecnologias web padrão e banco de dados relacional (MySQL).
 - **Viabilidade Financeira:** Integração com infraestrutura municipal ou hospedagem de baixo custo.
@@ -96,7 +96,7 @@ O desenvolvimento é estruturado através das seguintes abordagens:
 
 ---
 
-## 5. 🎨 Design
+## 5. Design
 
 ### Paleta de Cores
 - Azul Primário: #2D9CDB
@@ -110,13 +110,13 @@ O desenvolvimento é estruturado através das seguintes abordagens:
 
 ---
 
-## 6. 🖥️ Protótipo
+## 6. Protótipo
 
 - [Acesse o protótipo no Figma]
 
 ---
 
-## 7. 💻 Aplicação
+## 7. Aplicação
 
 A aplicação está em fase de estruturação do banco de dados e front-end.
 
