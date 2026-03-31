@@ -54,29 +54,29 @@ O desenvolvimento é estruturado através das seguintes abordagens:
 - **Processos:** Versionamento de código via Git/GitHub e documentação técnica contínua.
 
 ---
+## 2.  Requisitos
 
-## 2. Requisitos
-
-### • Requisitos Funcionais
+### • Requisitos Funcionais (RF)
 
 | ID | Requisito | Descrição |
 | :--- | :--- | :--- |
-| **RF01** | **Institucional e Memória** | Exibir história do conselho, galeria de presidentes, organograma e aba para história dos conselheiros. |
-| **RF02** | **Dados Sociais** | Divulgar estatísticas sobre a população PCD de Jaú para conscientização pública. |
-| **RF03** | **Canais de Contato** | Formulário de contato, telefones, e-mails e endereços oficiais do conselho. |
-| **RF04** | **Espaço para Transparência** | Área dedicada para download de atas, documentos oficiais e resoluções do conselho. |
-| **RF05** | **Notícias e Redes Sociais** | Publicação de novidades e integração com feed das redes sociais institucionais. |
-| **RF06** | **Cadastro Assistencial** | Formulário com upload de 3 arquivos (RG, Residência e Laudo) direcionado à Assistência Social. |
-| **RF07** | **Login de Usuários** | Sistema de autenticação com diferentes níveis de acesso para usuários e administradores. |
-| **RF08** | **Painel Administrativo** | Gestão de conteúdos, edição de conselheiros e importação de dados via Excel/Fichas. |
+| **RF01** | **Institucional e Memória** | Exibir história, galeria de presidentes, organograma e trajetória dos conselheiros. |
+| **RF02** | **Canal de Comunicação Único** | Disponibilizar o número oficial de contato do CMPCD para atendimento ao público. |
+| **RF03** | **Integração Social** | Exibição de publicações das redes sociais oficiais no portal. |
+| **RF04** | **Transparência Pública** | Área para download de atas, resoluções e documentos oficiais do conselho. |
+| **RF05** | **Formulário de Cadastro Integral** | Coleta completa de dados pessoais, socioeconômicos e de saúde, com upload obrigatório de documentos (RG, Residência e Laudo). |
+| **RF06** | **Painel Estatístico** | Exibir para pessoas autorizadas, dashboards com índices, gráficos estatísticos e dados populacionais das PCDs cadastrados. |
+| **RF07** | **Níveis de Acesso** | **Assistente Social:** Acesso total a fichas e documentos. <br> **CMPCD:** Gestão de conteúdo e visualização do painel de índices. |
+| **RF08** | **Autonomia de Edição** | Interface amigável para o conselho atualizar notícias e informações do site sem suporte técnico. |
+| **RF09** | **Importação de Dados Externos** | Funcionalidade para cadastrar pessoas via importação de arquivos **Excel** ou digitalização de fichas manuais. |
+| **RF10** | **Gestão de Cadastros** | Permitir que o administrador localize, edite ou atualize as fichas de cadastro já inseridas. |
 
-### • Requisitos Não Funcionais
+### • Requisitos Não Funcionais (RNF)
 
-- **Desempenho:** Carregamento Rápido das paginas.
-- **Responsividade:** Layout adaptável (Mobile-First) para desktop, tablet e celular.
-- **Acessibilidade:** Seguir diretrizes WCAG (contraste, textos alternativos e suporte a leitores de tela).
-- **Segurança (LGPD):** Criptografia e acesso restrito aos documentos sensíveis anexados.
-- **Interoperabilidade:** Exportação e importação de dados em formatos CSV ou JSON.
+- **Privacidade (LGPD):** O painel de índices e dados dos PCDs é restrito a usuários autenticados, não estando disponível para o público geral.
+- **Desempenho:** Carregamento em até 3 segundos.
+- **Acessibilidade:** Suporte total a leitores de tela e alto contraste para garantir o uso por todos os perfis de usuários.
+- **Integridade:** Validação de campos obrigatórios no cadastro para garantir a qualidade das estatísticas geradas.
 
 ---
 
