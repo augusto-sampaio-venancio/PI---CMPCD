@@ -1,21 +1,23 @@
-#  Documentação do PI - CMPCD Jaú
+# Documentação do PI - CMPCD Jaú
 
-Esta documentação descreve o andamento do PI (Projeto Integrador) da faculdade, abordando as etapas realizadas e a evolução do projeto focado no desenvolvimento do sistema para o **CMPCD Jaú**.
+Esta documentação descreve o andamento do Projeto Integrador (PI) desenvolvido para o **CMPCD Jaú – Conselho Municipal dos Direitos da Pessoa com Deficiência de Jahu**, apresentando os objetivos, requisitos, regras de negócio e evolução do sistema institucional e de cadastro de pessoas com deficiência.
 
-## Sumário
+---
+
+# Sumário
 
 <details>
-  <summary><strong>Expandir Sumário</strong></summary>
+<summary><strong>Expandir Sumário</strong></summary>
 
-- [1. Introdução](#1-introdução)
-  - [Objetivos](#objetivos)
-  - [Metodologia](#metodologia)
-- [2. Requisitos](#2-requisitos)
-  - [Requisitos funcionais](#requisitos-funcionais)
-  - [Requisitos não funcionais](#requisitos-não-funcionais)
-- [3. Estudo de viabilidade](#3-estudo-de-viabilidade)
-- [4. Regras de negócio (Modelo Canvas)](#4-regras-de-negócio-modelo-canvas)
-- [5. Design](#5-design)
+- [1. Introdução e Objetivos](#1-introdução-e-objetivos)
+  - [Objetivo Geral](#objetivo-geral)
+  - [Objetivos Específicos](#objetivos-específicos)
+- [2. Especificação de Requisitos](#2-especificação-de-requisitos)
+  - [2.1 Requisitos Funcionais](#21-requisitos-funcionais-rf)
+  - [2.2 Requisitos Não Funcionais](#22-requisitos-não-funcionais-rnf)
+- [3. Estudo de Viabilidade](#3-estudo-de-viabilidade)
+- [4. Modelo de Negócios Canvas](#4-modelo-de-negócios-canvas)
+- [5. Design do Sistema](#5-design-do-sistema)
 - [6. Protótipo](#6-protótipo)
 - [7. Aplicação](#7-aplicação)
 
@@ -23,103 +25,257 @@ Esta documentação descreve o andamento do PI (Projeto Integrador) da faculdade
 
 ---
 
-## 1. Introdução
+# 1. Introdução e Objetivos
 
-### Contextualização & Justificativa
+## Contextualização
 
-O **CMPCD Jaú (Conselho Municipal de Pessoas com Deficiência)** é um órgão colegiado de caráter consultivo, deliberativo e fiscalizador, que atua na formulação e fiscalização de políticas públicas voltadas à inclusão. Jaú possui hoje cerca de **7.135 pessoas com deficiência**, e o conselho necessita de uma ferramenta digital que centralize informações e promova a transparência. A motivação deste projeto é criar uma ponte entre os conselheiros, as entidades (AMAE, APAE, CISC) e a Secretaria de Assistência Social, garantindo que os dados demográficos auxiliem na gestão pública eficiente e na valorização dos direitos da pessoa com deficiência.
+O **CMPCD Jaú (Conselho Municipal dos Direitos da Pessoa com Deficiência de Jahu)** é um órgão colegiado de caráter consultivo, deliberativo e fiscalizador, responsável por acompanhar, propor e fiscalizar políticas públicas voltadas às pessoas com deficiência no município.
+
+Com o crescimento da demanda por organização, transparência e centralização de informações, surgiu a necessidade de um sistema digital capaz de armazenar dados, facilitar o acesso às informações institucionais e auxiliar a Secretaria de Assistência e Desenvolvimento Social no planejamento de ações inclusivas.
+
+O projeto propõe o desenvolvimento de um **portal institucional integrado a um sistema de cadastro e gerenciamento de PCDs**, permitindo a geração de dados estatísticos e maior eficiência administrativa.
 
 ---
 
-### • Objetivos
+## Objetivo Geral
 
-##### - Objetivo principal
 Desenvolver um site institucional para o **CMPCD Jaú**, integrado à Secretaria de Assistência e Desenvolvimento Social, que possibilite o cadastro e gerenciamento de informações de pessoas com deficiência (PCDs), funcionando como um banco de dados confiável para o planejamento de serviços de inclusão social.
 
-##### - Objetivos específicos
-1. Criar um portal informativo com a história do conselho, missão, valores, **organograma** e **galeria de presidentes**.
-2. Desenvolver um sistema de cadastro online para PCDs com upload obrigatório de documentos (**RG, Comprovante de Residência e Laudo Médico**).
-3. Implementar um **Espaço de Transparência** para divulgação de atas, reuniões, resoluções e contatos dos conselheiros.
-4. Facilitar a importação de dados externos provenientes de fichas e planilhas de entidades parceiras (AMAE, APAE, CISC).
-5. Garantir acessibilidade digital plena (contraste, fontes ampliadas e suporte a leitores de tela).
+---
+
+## Objetivos Específicos
+
+1. Criar um portal informativo com a história do conselho, missão, valores, organograma e galeria de presidentes.
+
+2. Desenvolver um sistema de cadastro online para PCDs com upload obrigatório de documentos:
+   - RG;
+   - Comprovante de residência;
+   - Laudo médico.
+
+3. Implementar um espaço de transparência para divulgação de:
+   - atas;
+   - reuniões;
+   - resoluções;
+   - editais;
+   - documentos oficiais.
+
+4. Facilitar a importação de dados externos provenientes de fichas e planilhas de entidades parceiras como:
+   - AMAE;
+   - APAE;
+   - CISC.
+
+5. Garantir acessibilidade digital plena com:
+   - alto contraste;
+   - redimensionamento de fontes;
+   - suporte a leitores de tela.
 
 ---
 
-### • Metodologia
+# 2. Especificação de Requisitos
 
-O desenvolvimento é estruturado através das seguintes abordagens:
+## 2.1 Requisitos Funcionais (RF)
 
-- **Métodos utilizados:** Metodologia Ágil (Scrum/Kanban) para entregas incrementais.
-- **Tecnologias e ferramentas:** HTML5, CSS3 (Bootstrap), JavaScript (ES6+), MySQL para o banco de dados e Figma para design UX/UI.
-- **Processos:** Versionamento de código via Git/GitHub e documentação técnica contínua.
+Os requisitos funcionais representam as funcionalidades obrigatórias do sistema.
+
+| ID | Nome do Requisito | Descrição |
+|---|---|---|
+| RF01 | História Institucional | O site deve exibir a história do conselho, sua origem, evolução e principais marcos institucionais. |
+| RF02 | Galeria de Presidentes | O sistema deve exibir fotos, nomes e períodos de mandato dos presidentes do conselho. |
+| RF03 | Membros do Conselho | O portal deve apresentar os membros ativos do conselho e suas respectivas funções. |
+| RF04 | Organograma Institucional | O site deve exibir a estrutura organizacional oficial do conselho. |
+| RF05 | Formulário de Contato | Disponibilizar formulário contendo nome, e-mail, telefone, assunto e mensagem, além dos contatos institucionais. |
+| RF06 | Integração com Redes Sociais | Integrar Instagram e Facebook, exibindo publicações recentes automaticamente. |
+| RF07 | Espaço de Transparência Pública | Disponibilizar área para visualização e download de atas, resoluções, editais e documentos oficiais. |
+| RF08 | Cadastro de PCD | Permitir cadastro completo de cidadãos com informações pessoais, socioeconômicas e de saúde, incluindo upload de documentos obrigatórios. |
+| RF09 | Gestão de Cadastros | Permitir localizar, editar e atualizar registros já existentes. |
+| RF10 | Painel Estatístico e de Índices | Exibir dashboards administrativos com gráficos, estatísticas e indicadores sobre a população PCD cadastrada. |
+| RF11 | Gestão de Níveis de Acesso | Controlar permissões por perfis: Assistente Social, CMPCD e Administrador/Editor. |
+| RF12 | Importação de Dados Externos | Permitir importação de dados via arquivos Excel (.xlsx/.csv) e fichas físicas digitalizadas. |
 
 ---
-## 2.  Requisitos
 
-### • Requisitos Funcionais (RF)
+## 2.2 Requisitos Não Funcionais (RNF)
+
+Os requisitos não funcionais definem características técnicas e de qualidade do sistema.
+
+---
+
+### 2.2.1 Segurança e Privacidade
 
 | ID | Requisito | Descrição |
-| :--- | :--- | :--- |
-| **RF01** | **Institucional e Memória** | Exibir história, galeria de presidentes, organograma e trajetória dos conselheiros. |
-| **RF02** | **Canal de Comunicação Único** | Disponibilizar o número oficial de contato do CMPCD para atendimento ao público. |
-| **RF03** | **Integração Social** | Exibição de publicações das redes sociais oficiais no portal. |
-| **RF04** | **Transparência Pública** | Área para download de atas, resoluções e documentos oficiais do conselho. |
-| **RF05** | **Formulário de Cadastro Integral** | Coleta completa de dados pessoais, socioeconômicos e de saúde, com upload obrigatório de documentos (RG, Residência e Laudo). |
-| **RF06** | **Painel Estatístico** | Exibir para pessoas autorizadas, dashboards com índices, gráficos estatísticos e dados populacionais das PCDs cadastrados. |
-| **RF07** | **Níveis de Acesso** | **Assistente Social:** Acesso total a fichas e documentos. <br> **CMPCD:** Gestão de conteúdo e visualização do painel de índices. |
-| **RF08** | **Autonomia de Edição** | Interface amigável para o conselho atualizar notícias e informações do site sem suporte técnico. |
-| **RF09** | **Importação de Dados Externos** | Funcionalidade para cadastrar pessoas via importação de arquivos **Excel** ou digitalização de fichas manuais. |
-| **RF10** | **Gestão de Cadastros** | Permitir que o administrador localize, edite ou atualize as fichas de cadastro já inseridas. |
-
-### • Requisitos Não Funcionais (RNF)
-
-- **Privacidade (LGPD):** O painel de índices e dados dos PCDs é restrito a usuários autenticados, não estando disponível para o público geral.
-- **Desempenho:** Carregamento em até 3 segundos.
-- **Acessibilidade:** Suporte total a leitores de tela e alto contraste para garantir o uso por todos os perfis de usuários.
-- **Integridade:** Validação de campos obrigatórios no cadastro para garantir a qualidade das estatísticas geradas.
+|---|---|---|
+| RNF01 | LGPD e Privacidade | Dados individuais dos PCDs devem ser protegidos e acessíveis apenas por usuários autenticados. |
+| RNF02 | Integridade dos Dados | O sistema deve validar campos obrigatórios para garantir precisão estatística. |
 
 ---
 
-## 3. Estudo de Viabilidade
+### 2.2.2 Usabilidade e Acessibilidade
 
-- **Viabilidade Técnica:** Uso de tecnologias web padrão e banco de dados relacional (MySQL).
-- **Viabilidade Financeira:** Integração com infraestrutura municipal ou hospedagem de baixo custo.
-- **Viabilidade Operacional:** Interface simplificada para operação pelos coordenadores da Secretaria de Assistência Social.
-
----
-
-## 4. 💼 Regras de Negócio (Modelo Canvas)
-
-- **Proposta de Valor:** Centralizar o censo PCD e as ações do conselho em uma plataforma transparente.
-- **Segmentos:** Conselheiros do CMPCD, Pessoas PCDs de Jaú e Gestão Pública.
-- **Parcerias Chave:** Prefeitura municipal e entidades parceiras (AMAE, APAE, CISC).
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF03 | Acessibilidade | O sistema deve seguir diretrizes WCAG, com suporte a leitores de tela, alto contraste e redimensionamento de fontes. |
+| RNF04 | Responsividade | A interface deve adaptar-se automaticamente a desktop, tablets e smartphones. |
 
 ---
 
-## 5. Design
+### 2.2.3 Desempenho e Tecnologia
 
-### Paleta de Cores
-- Azul Primário: #2D9CDB
-- Azul Suave: #56CCF2
-- Bege Claro: #F9F7F1
-- Cinza Suave: #E0E0E0
-- Preto Suave: #333333
-
-### Fontes Utilizadas
-- **Títulos e Textos:** "Nunito", Arial, Helvetica, sans-serif.
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF05 | Desempenho | O carregamento das páginas deve ocorrer em até 3 segundos em conexões estáveis. |
+| RNF06 | Stack Tecnológica | O sistema será desenvolvido com HTML5, CSS3 (Bootstrap), JavaScript e MySQL. |
+| RNF07 | Interoperabilidade | O sistema deve permitir exportação de relatórios em Excel, CSV e PDF. |
 
 ---
 
-## 6. Protótipo
+# 3. Estudo de Viabilidade
 
-- [Acesse o protótipo no Figma]
+## Viabilidade Técnica
+
+O projeto utiliza tecnologias web amplamente consolidadas, como:
+- HTML5;
+- CSS3;
+- Bootstrap;
+- JavaScript;
+- MySQL.
+
+Essas ferramentas possuem ampla documentação, baixo custo de implementação e facilidade de manutenção.
 
 ---
 
-## 7. Aplicação
+## Viabilidade Financeira
 
-A aplicação está em fase de estruturação do banco de dados e front-end.
+O sistema poderá ser hospedado em infraestrutura municipal ou em serviços de hospedagem de baixo custo, reduzindo despesas operacionais.
 
-- **Tecnologias:** HTML5, CSS3, JavaScript e MySQL.
-- **Execução local:** 1. Clone o repositório.
-  2. Abra o arquivo `index.html` no navegador.
+---
+
+## Viabilidade Operacional
+
+A interface será desenvolvida com foco em simplicidade e usabilidade, permitindo que os responsáveis da Secretaria de Assistência Social utilizem o sistema sem necessidade de conhecimento técnico avançado.
+
+---
+
+# 4. Modelo de Negócios Canvas
+
+## Proposta de Valor
+
+Centralizar informações e o censo PCD do município em uma plataforma digital segura, acessível e transparente.
+
+---
+
+## Segmentos de Usuários
+
+- Conselheiros do CMPCD;
+- Pessoas com deficiência;
+- Secretaria de Assistência Social;
+- Gestão Pública Municipal.
+
+---
+
+## Parceiros-Chave
+
+- Prefeitura Municipal de Jahu;
+- Secretaria de Assistência e Desenvolvimento Social;
+- AMAE;
+- APAE;
+- CISC.
+
+---
+
+## Benefícios Esperados
+
+- Maior organização dos dados;
+- Transparência pública;
+- Facilidade de gestão;
+- Apoio ao planejamento de políticas públicas;
+- Inclusão digital e acessibilidade.
+
+---
+
+# 5. Design do Sistema
+
+## Paleta de Cores
+
+| Cor | Código |
+|---|---|
+| Azul Primário | #2D9CDB |
+| Azul Suave | #56CCF2 |
+| Bege Claro | #F9F7F1 |
+| Cinza Suave | #E0E0E0 |
+| Preto Suave | #333333 |
+
+---
+
+## Tipografia
+
+- Fonte principal: **Nunito**
+- Fontes alternativas:
+  - Arial;
+  - Helvetica;
+  - sans-serif.
+
+---
+
+## Diretrizes Visuais
+
+- Interface limpa e acessível;
+- Navegação simplificada;
+- Alto contraste;
+- Layout responsivo;
+- Foco em acessibilidade digital.
+
+---
+
+# 6. Protótipo
+
+O protótipo visual do sistema foi desenvolvido no **Figma**, permitindo a validação prévia da interface e experiência do usuário antes da implementação.
+
+- Estruturação das telas institucionais;
+- Simulação do cadastro de PCDs;
+- Definição da identidade visual;
+- Protótipo responsivo.
+
+---
+
+# 7. Aplicação
+
+Atualmente, o sistema encontra-se em desenvolvimento, com foco na estruturação do banco de dados, construção das interfaces e implementação das funcionalidades administrativas.
+
+## Tecnologias Utilizadas
+
+- HTML5;
+- CSS3;
+- Bootstrap;
+- JavaScript;
+- MySQL;
+- Git/GitHub.
+
+---
+
+## Funcionalidades em Desenvolvimento
+
+- Sistema de autenticação;
+- Painel administrativo;
+- Dashboard estatístico;
+- Upload de documentos;
+- Integração com banco de dados;
+- Importação de planilhas;
+- Área de transparência pública.
+
+---
+
+
+# Equipe do Projeto
+
+- Augusto Sampaio Venâncio
+- Elias Gabriel Michelon
+- Lucas Antonio Ribeiro
+- Luhan de Paula Ribeiro
+- Matheus Marques da Silva
+- Samuel Custódio dos Santos
+
+---
+
+# Instituição
+
+Projeto Integrador desenvolvido na Fatec-Jahu – 2026**.
